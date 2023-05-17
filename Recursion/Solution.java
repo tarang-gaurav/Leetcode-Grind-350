@@ -1,13 +1,14 @@
 class Solution{
 
 
-    void printRecursion(int x){
-        if(x==0)
+    void printRecursion(int N){
+        int i=1;
+        if(i==N)
         {
             return;
-        }else{
-            System.out.println("Code");
-            printRecursion(x-1);
+        }else{          
+            System.out.println(i);
+            printRecursion(i+1);
         }
 
         
@@ -16,7 +17,7 @@ class Solution{
     public static void main(String[] args){
         Solution s=new Solution();
         System.out.println("Welcome!!!");
-        s.printRecursion(5);
+        s.printRecursion(12);
 
     }
 
