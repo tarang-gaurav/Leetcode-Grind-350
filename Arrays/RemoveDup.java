@@ -1,4 +1,11 @@
 class Solution {
+    /*
+    We can use temp Array to store unique elements or array in place but it will only work when array is sorted
+    In case of unsorted array we need to use hasSet and to maintain the order we can use linkedHashSet for insertion order or TreeSet to generic order 
+    or we can use count hash Array or hashMap too to record the count and then manipulate original array.
+    
+    */
+    
     public int removeDuplicates(int[] nums) {
         int count=0;
         for(int i=0;i<nums.length;i++){
