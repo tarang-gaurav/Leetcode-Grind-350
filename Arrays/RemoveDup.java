@@ -9,13 +9,15 @@ class Solution {
             nums[count]=nums[i];
             count++;
         }
+        for(Integer i:nums)
+            System.out.print(i+" ");
         return count;
     }
 
     public static void main(String[] args){
         Solution s=new Solution();
         int[] arr={0,1,1,2,2,2,2,3};
-        s.removeDuplicates(arr);
+        System.out.println(s.removeDuplicates(arr));
     }
 
 }
