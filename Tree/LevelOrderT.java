@@ -8,7 +8,7 @@ import java.util.Queue;
 public class LevelOrderT {
     
  Node root;  
-
+    //Using Queue
     public List<List<Integer>> levelOrderTraversal(Node root) {
        
         List<List<Integer>>resList=new ArrayList<>();
