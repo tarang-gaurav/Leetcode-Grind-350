@@ -1,5 +1,5 @@
 class Node{
-
+///Representation of Tree
     int data;
     Node left;
     Node right;
