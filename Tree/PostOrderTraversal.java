@@ -10,12 +10,11 @@ public class PostOrderTraversal {
         if(root==null)
             return new ArrayList<>();
 
-        List<Integer>preOrderList=new ArrayList<>();
-        preOrderList.add(root.data);
-        preOrderList.addAll(postorderTraversal(root.left));
-        preOrderList.addAll(postorderTraversal(root.right));
-
-        return preOrderList;
+        List<Integer>postOrderList=new ArrayList<>();
+        postOrderList.addAll(postorderTraversal(root.left));
+        postOrderList.addAll(postorderTraversal(root.right));
+        postOrderList.add(root.data);
+         return postOrderList;
     }
 
     List<Integer>postOrder(){return postorderTraversal(root);}
