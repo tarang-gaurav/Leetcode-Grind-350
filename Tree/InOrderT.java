@@ -3,7 +3,7 @@ import java.util.List;
 public class InOrderT {
     
 Node root;  
-
+    //Recursive
     public List<Integer> inOrderTraversal(Node root) {
         if(root==null)
             return new ArrayList<>();
