@@ -6,7 +6,7 @@ import java.util.List;
 class PreOrderTraverse {
     //root node
      Node root;  
-
+//Recursive Solution
     public List<Integer> preorderTraversal(Node root) {
         if(root==null)
             return new ArrayList<>();
