@@ -17,17 +17,17 @@ public class CountGoodNodes {
  * }
  */
 
-    private int helper(TreeNode root,int maxV){
+    private int helper(Node root,int maxV){
         if(root==null) return 0;
         int res;
-        if(root.val>=maxV) res=1;
+        if(root.data>=maxV) res=1;
         else res=0;
-        maxV=Math.max(maxV,root.val);
+        maxV=Math.max(maxV,root.data);
         res=res+helper(root.left,maxV);
         res=res+helper(root.right,maxV);
         return res;
     }
-    public int goodNodes(TreeNode root) {
+    public int goodNodes(Node root) {
         return helper(root,Integer.MIN_VALUE);
     }
 
