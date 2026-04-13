@@ -11,32 +11,29 @@ public class Koko {
             totalTime += (int)Math.ceil((double)arr[i]/mid);
            
         }
-         if(totalTime<=h){
-                return true;
-            }
-        return false;
+        return (totalTime<=h);
     }
 
 
    public int minEatingSpeed(int[] piles, int h) {
         int high = Arrays.stream(piles).max().getAsInt();
-        int low = 0;
+        int low = 1;
         int ans=high;
         while(low<=high){
             int mid = low+(high-low)/2;
             if(canEatPile(mid, piles, h)){
                 ans = mid;
-                high = mid -1;
+                high = mid-1;
             }
             else{
                 low = mid +1;
             }
         }
-        return low;
+        return ans;
     }
 
     public static void main(String[] args) {
         Koko k = new Koko();
-        System.out.println(k.minEatingSpeed(new int[]{3,6,7,11}, 8));
+        System.out.println(k.minEatingSpeed(new int[]{3,6,7,11}, 18));
     }
 }
