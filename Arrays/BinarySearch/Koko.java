@@ -34,6 +34,6 @@ public class Koko {
 
     public static void main(String[] args) {
         Koko k = new Koko();
-        System.out.println(k.minEatingSpeed(new int[]{3,6,7,11}, 18));
+        System.out.println(k.minEatingSpeed(new int[]{805306368,805306368,805306368}, 1000000000));
     }
 }
