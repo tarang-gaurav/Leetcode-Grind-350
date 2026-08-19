@@ -2,6 +2,40 @@ package TwoPointes;
 
 public class TrappingRainWater {
 
+    private int getTrappedRainWaterOptimal(int[] height){
+int leftMax=0;
+        int rightMax=height.length-1;
+        int low = 0;
+        int high = height.length-1;
+        int water = 0;
+
+
+        while(low<high){
+
+            if(height[low]<=height[high]){
+
+                if(height[low]<height[leftMax]){
+                    water += Math.min(height[leftMax],height[rightMax]) - height[low];
+                }else{
+                    height[leftMax] = height[low];
+                }
+                low++;
+
+            }
+            else{
+
+                if(height[high]<height[rightMax]){
+                    water += Math.min(height[leftMax],height[rightMax]) - height[high];
+                }else{
+                    height[rightMax] = height[high];
+                }
+                high--;
+            }
+
+        }
+
+        return water;
+    }
     private int getTrappedTotalWater(int[] arr){
         int len = arr.length;
        
@@ -30,6 +64,6 @@ public class TrappingRainWater {
 
     public static void main(String[] args) {
         TrappingRainWater t = new TrappingRainWater();
-        System.out.println(t.getTrappedTotalWater(new int[]{4,2,0,3,2,5}));
+        System.out.println(t.getTrappedRainWaterOptimal(new int[]{4,2,3}));
     }
 }
